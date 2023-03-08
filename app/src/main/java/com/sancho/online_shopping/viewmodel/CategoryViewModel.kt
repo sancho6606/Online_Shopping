@@ -13,12 +13,13 @@ class CategoryViewModel constructor(
     fun uploadnewcategory(name:String,uri: Uri){
         repositoryCategory.uploadcategory(name,uri)
     }
-    fun uploadsucces():MutableLiveData<Boolean>{
-        return repositoryCategory.livedatasucces
-    }
     fun uploadprogress():MutableLiveData<Double>{
         return repositoryCategory.livedataprogress
     }
+    fun uploadsucces():MutableLiveData<Boolean>{
+        return repositoryCategory.livedatasucces
+    }
+
     fun readallcategory():MutableLiveData<ArrayList<CategoryModel>>{
         return repositoryCategory.readalldata()
     }

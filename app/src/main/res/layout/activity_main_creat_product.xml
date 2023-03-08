@@ -27,21 +27,50 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/circleimageviewcateryimageinproduct"
-                android:src="@drawable/noimage"
-                android:layout_alignParentEnd="true"
-                android:layout_margin="10dp"
                 android:layout_width="40dp"
-                android:layout_height="40dp"></de.hdodenhof.circleimageview.CircleImageView>
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/noimage"></de.hdodenhof.circleimageview.CircleImageView>
 
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
-    <ImageView
-        android:src="@drawable/noimage"
-        android:scaleType="centerCrop"
-        android:id="@+id/imageviewopengalleryproduct"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"></ImageView>
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/noimage"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageviewopengalleryproduct"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"></ImageView>
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="350dp"
+            android:id="@+id/progressBarhorizontalproduct"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#034AFF"
+            android:visibility="gone"
+            android:gravity="end"
+            android:layout_below="@id/progressBarhorizontalproduct"
+            android:layout_marginRight="15dp"
+            android:textSize="30dp"
+            android:text="0%"
+            android:id="@+id/textviewprogressproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+    </RelativeLayout>
+
     <LinearLayout
         android:padding="15dp"
         android:orientation="vertical"
@@ -61,7 +90,6 @@
             android:layout_marginTop="15dp"
             android:padding="10dp"
             android:background="@drawable/edittextbackround"
-            android:inputType="number"
             android:hint="0 UZS"
             android:id="@+id/edittextproductprice"
             android:layout_width="match_parent"
@@ -77,26 +105,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></EditText>
 
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/progressBarhorizontalproduct"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:visibility="gone"
-            android:textSize="40dp"
-            android:text="0%"
-            android:id="@+id/textviewprogressproduct"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></TextView>
 
-        <Button
-            android:id="@+id/buttonaddproducts"
-            android:text="add new product"
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></Button>
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:enabled="false"
+                android:id="@+id/buttonaddproducts"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Create"
+                android:background="@drawable/buttonbackround"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+        </RelativeLayout>
 
     </LinearLayout>
+
+
 
 </LinearLayout>

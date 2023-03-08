@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sancho.online_shopping.databinding.RecyclerviewItemCategoryBinding
 import com.sancho.online_shopping.model.CategoryModel
+import com.sancho.online_shopping.view.MainActivity
 import com.sancho.online_shopping.view.MainActivityCreatProduct
 
 class CategoryAdapter constructor(
@@ -15,6 +17,8 @@ class CategoryAdapter constructor(
     val arrayList: ArrayList<CategoryModel>,
 
 ):RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>(){
+
+    val mainActivity:MainActivity=context as MainActivity
 
     class CategoryViewHolder(val binding:RecyclerviewItemCategoryBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -33,6 +37,10 @@ class CategoryAdapter constructor(
                 intent.putExtra("image",arrayList.get(position).imageurl)
                 context.startActivity(intent)
                 return@setOnLongClickListener true
+            }
+
+            linearlaycategory.setOnClickListener {
+                mainActivity.categorychanged(arrayList.get(position).name!!)
             }
         }
     }

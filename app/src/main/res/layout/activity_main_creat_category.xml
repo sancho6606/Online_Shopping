@@ -5,11 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
     tools:context=".view.MainActivityCreatCategory">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -19,6 +17,35 @@
             android:id="@+id/imageviewcreatimagecategory"
             android:layout_width="match_parent"
             android:layout_height="300dp"></ImageView>
+        <ProgressBar
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="230dp"
+            android:id="@+id/progressBarhorizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#034AFF"
+            android:gravity="end"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/progressBarhorizontal"
+            android:textSize="30dp"
+            android:text="0%"
+            android:id="@+id/textviewprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
 
         <EditText
             android:id="@+id/edittextcategoryname"
@@ -32,23 +59,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></EditText>
 
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/progressBarhorizontal"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:visibility="gone"
-            android:textSize="40dp"
-            android:text="0%"
-            android:id="@+id/textviewprogress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></TextView>
+
 
     </LinearLayout>
 
     <RelativeLayout
+        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

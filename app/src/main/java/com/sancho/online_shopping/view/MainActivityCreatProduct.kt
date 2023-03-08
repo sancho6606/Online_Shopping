@@ -3,6 +3,7 @@ package com.sancho.online_shopping.view
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
@@ -39,6 +40,19 @@ class MainActivityCreatProduct : AppCompatActivity() {
                     edittextproductdescription.text.toString(),
                 )
             }
+            productViewModel.uploadsucces().observe(this@MainActivityCreatProduct,{
+                if (it){
+                    showprogress()
+                }else{
+                    hideprogress()
+                }
+            })
+            productViewModel.uploadproductprogress().observe(this@MainActivityCreatProduct,{
+                textviewprogressproduct.text="${it.toInt()}%"
+                progressBarhorizontalproduct.progress=it.toInt()
+            })
+
+
         }
 
     }
@@ -54,4 +68,29 @@ class MainActivityCreatProduct : AppCompatActivity() {
             binding.buttonaddproducts.isEnabled=true
         }
     }
+
+    //show progress hide progress
+    fun showprogress(){
+        binding.apply {
+            progressBarhorizontalproduct.visibility=View.VISIBLE
+            textviewprogressproduct.visibility=View.VISIBLE
+        }
+    }
+    fun hideprogress(){
+        binding.apply {
+            progressBarhorizontalproduct.visibility=View.GONE
+            textviewprogressproduct.visibility=View.GONE
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
