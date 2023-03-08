@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "483573609312",
+    "project_id": "online-shopping-a8ded",
+    "storage_bucket": "online-shopping-a8ded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483573609312:android:d7f51bc1ad1b4fef72e405",
+        "android_client_info": {
+          "package_name": "com.sancho.online_shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483573609312-gmcalcl0gu0oepdrvhfjtq8itdnsklq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh07Zzq3YyvKWmE6P4gtYFKRSIPUVeuiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483573609312-gmcalcl0gu0oepdrvhfjtq8itdnsklq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

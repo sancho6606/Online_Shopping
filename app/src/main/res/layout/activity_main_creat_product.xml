@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivityCreatProduct">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#03ACFB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textviewcategoryinproduct"
+                android:textSize="22dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:text="Categories and Products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimageviewcateryimageinproduct"
+                android:src="@drawable/noimage"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:src="@drawable/noimage"
+        android:scaleType="centerCrop"
+        android:id="@+id/imageviewopengalleryproduct"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"></ImageView>
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/edittextbackround"
+            android:hint="Enter product name"
+            android:id="@+id/edittextproductname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextbackround"
+            android:inputType="number"
+            android:hint="0 UZS"
+            android:id="@+id/edittextproductprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <EditText
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:background="@drawable/edittextbackround"
+            android:hint="Description"
+            android:id="@+id/edittextproductdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressBarhorizontalproduct"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:textSize="40dp"
+            android:text="0%"
+            android:id="@+id/textviewprogressproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <Button
+            android:id="@+id/buttonaddproducts"
+            android:text="add new product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
