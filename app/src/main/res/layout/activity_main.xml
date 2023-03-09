@@ -54,7 +54,7 @@
 
     <TextView
         android:id="@+id/textviewproduct"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"

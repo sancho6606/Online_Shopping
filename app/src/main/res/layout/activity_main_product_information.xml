@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivityProductInformation">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#03ACFB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textviewcategoryinproduct"
+                android:textSize="22dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:text="Categories and Products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleimageviewcateryimageinproduct"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/noimage"></de.hdodenhof.circleimageview.CircleImageView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageviewproduct"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noimage"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"></ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:text="Anime"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:id="@+id/textviewproductnameinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:textColor="@color/black"
+            android:text="Anime"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:id="@+id/textviewproductdescriptioninfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Anime"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:id="@+id/textviewproductpriceinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:enabled="false"
+            android:id="@+id/buttoninthebasket"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="В корзину"
+            android:background="@drawable/buttonbackround"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

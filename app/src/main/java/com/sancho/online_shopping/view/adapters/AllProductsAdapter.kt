@@ -1,6 +1,7 @@
 package com.sancho.online_shopping.view.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.sancho.online_shopping.databinding.RecyclerviewItemCategoryBinding
 import com.sancho.online_shopping.databinding.RecyclerviewItemallproductsBinding
 import com.sancho.online_shopping.model.ProductModel
+import com.sancho.online_shopping.view.MainActivityProductInformation
 
 class AllProductsAdapter constructor(
     val context: Context,
@@ -25,6 +27,11 @@ class AllProductsAdapter constructor(
             textviewproductdescription.text=arrayList.get(position).description
             textviewproductprice.text=arrayList.get(position).price+" $"
             Glide.with(context).load(arrayList.get(position).imageurl).into(imageviewproductimage)
+            linearlayproduct.setOnClickListener {
+                val intent=Intent(context,MainActivityProductInformation::class.java)
+                intent.putExtra("product",arrayList.get(position))
+                context.startActivity(intent)
+            }
         }
     }
 

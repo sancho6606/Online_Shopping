@@ -118,7 +118,7 @@
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Create"
+                android:text="Создать"
                 android:background="@drawable/buttonbackround"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
